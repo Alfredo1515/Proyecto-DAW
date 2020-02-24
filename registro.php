@@ -7,13 +7,13 @@
 <form action="index.php?p=registro" method="POST" enctype="multipart/form-data" id="FormReg">
     <fieldset class="field">
         <legend>1. Datos Personales</legend>
-        <span>DNI: </span><input type="text" name="dni" size="20" maxlength="20" /><span id="errDni"><span><br>
-        <span>Nombre: </span><input type="text" name="nombre" size="20" maxlength="20" /><span><span><br>
-        <span>Apellidos: </span><input type="text" name="apellidos" size="20" maxlength="20" /><span><span><br>
-        <span>Fecha de nacimiento: </span><input type="text" name="fechaNac" size="20" maxlength="20" /><span><span><br>
-        <span>Direccion: </span><input type="text" name="direccion" size="20" maxlength="20" /><span><span><br>
-        <span>Correo: </span><input type="text" name="correo" size="20" maxlength="20" /><span><span><br>
-        <span>Telefono personal: </span><input type="text" name="telefono" size="20" maxlength="20" /><span><span><br>
+        <span>DNI: </span><input type="text" name="dni" size="20" maxlength="20" /><span id="errDni"></span><br>
+        <span>Nombre: </span><input type="text" name="nombre" size="20" maxlength="20" /><span></span><br>
+        <span>Apellidos: </span><input type="text" name="apellidos" size="20" maxlength="20" /><span></span><br>
+        <span>Fecha de nacimiento: </span><input type="text" name="fechaNac" size="20" maxlength="20" /><span></span><br>
+        <span>Direccion: </span><input type="text" name="direccion" size="20" maxlength="20" /><span></span><br>
+        <span>Correo: </span><input type="text" name="correo" size="20" maxlength="20" /><span></span><br>
+        <span>Telefono personal: </span><input type="text" name="telefono" size="20" maxlength="20" /><span></span><br>
     </fieldset>
     <fieldset class="field" id="academicos">
         <legend>2. Datos academicos</legend>
