@@ -1,7 +1,7 @@
 <?php
     echo var_dump($_POST);
     if(isset($_POST['enviar'])){
-        echo("holaddddddddddddddddddddddddddddddddddddddddddddddddd");
+        echo("Ahora si que esta bien el repositorio");
     }
 ?>
 
