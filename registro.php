@@ -1,4 +1,9 @@
-<h1>REGISTRO</h1>
+<?php
+    echo var_dump($_POST);
+    if(isset($_POST['enviar'])){
+        echo("holaddddddddddddddddddddddddddddddddddddddddddddddddd");
+    }
+?>
 
 <form action="index.php?p=registro" method="POST" enctype="text/plain">
     <fieldset class="field">
@@ -21,5 +26,16 @@
             <option>Ciclo formativo</option>
             <option>otros</option>
         </select>
+    </fieldset>
+    <fieldset>
+        <legend>3. Cursos en el centro</legend>
+        <p>Introduce los ciclos cursados en este centro: </p>
+        <ul>
+            <li>FPB<input type = "checkbox" name = "fpb" /><br></li>
+            <li>SMR<input type = "checkbox" name = "smr" /><br></li>
+            <li>DAW<input type = "checkbox" name = "daw" /><br></li>
+        </ul>
+
+        <input type="submit" name="enviar" value="Enviar" /><input type="button" name="borrar" value="borrar" />
     </fieldset>
 </form>
