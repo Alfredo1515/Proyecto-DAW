@@ -3,6 +3,7 @@
 ?>
 
 <div class="contenido">
+    
     <?php
         if($p == "indice"){
             include_once("indice.php");

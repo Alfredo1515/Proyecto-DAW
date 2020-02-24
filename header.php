@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/style.css" />
         <script src="scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
         <script src="scripts/proyecto.js" type="text/javascript"></script> 
+        <script src="scripts/validacion.js" type="text/javascript"></script> 
     </head>
  
     <body>
