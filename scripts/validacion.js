@@ -18,7 +18,7 @@ $(document).ready(function(){
                 $(this).next().text("");
             }
         }else if($(this).attr('name') == "fechaNac"){
-            
+            var expReg = //
         }
     });
 });
