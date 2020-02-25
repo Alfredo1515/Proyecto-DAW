@@ -1,6 +1,38 @@
 <?php
     if(isset($_POST['enviar'])){
-        echo("Ahora si que esta bien el repositorio");
+        $dni = $_POST['dni'];
+        $nombre = $_POST['nombre'];
+        $apellidos = $_POST['apellidos'];
+        $fechaNac = $_POST['fechaNac'];
+        $direccion = $_POST['direccion'];
+        $correo = $_POST['correo'];
+        $telefono = $_POST['telefono'];
+        $tipoEstudio = $_POST['tipoEstudio'];
+        $estudiosCentro = "";
+        
+        if(isset($_POST['fpb'])){
+            if($_POST['fpb'] == "on"){
+                $estudiosCentro = $estudiosCentro."fpb;";
+            }
+
+        }
+        
+        if(isset($_POST['smr'])){
+            if($_POST['smr'] == "on"){
+                $estudiosCentro = $estudiosCentro."smr;";
+            }
+        }
+
+        if(isset($_POST['daw'])){
+            if($_POST['daw'] == "on"){
+                $estudiosCentro = $estudiosCentro."daw;";
+            }
+
+        }
+
+        $estudiosCentro = substr($estudiosCentro, 0, strlen($estudiosCentro)-1);
+        $alumno = new Alumno();
+        
     }
 ?>
 

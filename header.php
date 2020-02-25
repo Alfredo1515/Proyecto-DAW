@@ -1,3 +1,8 @@
+<?php
+    include_once("clases/db_abstract_model.php");
+    include_once("clases/alumno_model.php")
+?>
+
 <h1>HEADER</h1>
 <!DOCTYPE html>
 <html lang="es">
