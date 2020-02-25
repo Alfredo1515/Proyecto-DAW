@@ -7,13 +7,13 @@
 <form action="index.php?p=registro" method="POST" enctype="multipart/form-data" id="FormReg">
     <fieldset class="field">
         <legend>1. Datos Personales</legend>
-        <span>DNI: </span><input type="text" name="dni" size="20" maxlength="20" /><span id="errDni"></span><br>
-        <span>Nombre: </span><input type="text" name="nombre" size="20" maxlength="20" /><span></span><br>
-        <span>Apellidos: </span><input type="text" name="apellidos" size="20" maxlength="20" /><span></span><br>
-        <span>Fecha de nacimiento: </span><input type="text" name="fechaNac" size="20" maxlength="20" /><span></span><br>
-        <span>Direccion: </span><input type="text" name="direccion" size="20" maxlength="20" /><span></span><br>
-        <span>Correo: </span><input type="text" name="correo" size="20" maxlength="20" /><span></span><br>
-        <span>Telefono personal: </span><input type="text" name="telefono" size="20" maxlength="20" /><span></span><br>
+        <span>DNI: </span><input type="text" name="dni" size="50" maxlength="50" class="obligatorio" /><span class="error"></span><br>
+        <span>Nombre: </span><input type="text" name="nombre" size="50" maxlength="50" class="obligatorio" /><span class="error"></span><br>
+        <span>Apellidos: </span><input type="text" name="apellidos" size="50" maxlength="50" class="obligatorio" /><span class="error"></span><br>
+        <span>Fecha de nacimiento: </span><input type="text" name="fechaNac" size="50" maxlength="50" class="obligatorio" /><span class="error"></span><br>
+        <span>Direccion: </span><input type="text" name="direccion" size="50" maxlength="50" /><span></span><br>
+        <span>Correo: </span><input type="text" name="correo" size="50" maxlength="50" class="obligatorio" /><span class="error"></span><br>
+        <span>Telefono personal: </span><input type="text" name="telefono" size="50" maxlength="50" class="obligatorio" /><span class="error"></span><br>
     </fieldset>
     <fieldset class="field" id="academicos">
         <legend>2. Datos academicos</legend>
@@ -34,6 +34,7 @@
             <li>SMR<input type = "checkbox" name = "smr" /><br></li>
             <li>DAW<input type = "checkbox" name = "daw" /><br></li>
         </ul>
+        <span id="errorCheckbox" class="error"></span>
 
         <input type="submit" name="enviar" value="Enviar" id="enviarRegistro" /><input type="button" name="borrar" value="borrar" />
     </fieldset>
