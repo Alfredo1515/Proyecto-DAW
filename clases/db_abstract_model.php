@@ -47,6 +47,7 @@ abstract class DBAbstractModel {
 			$this->error.= "Query: " . $this->query ."\n"; 
 			$this->error.= $this->conn->errno . "\n"; 
 			$this->error.= $this->conn->error . "\n"; 
+			echo $this->error;
 		}
 		while ($this->rows[] = $result->fetch_assoc());
 		$result->close();

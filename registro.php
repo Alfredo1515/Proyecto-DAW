@@ -32,6 +32,28 @@
 
         $estudiosCentro = substr($estudiosCentro, 0, strlen($estudiosCentro)-1);
         $alumno = new Alumno();
+        $alumno->get($dni);
+        $datos = $alumno->get_rows();
+        
+        $data = array(
+            "dni" => "$dni",
+            "nombre" => "$nombre",
+            "apellidos" => "$apellidos",
+            "fecha_Nacimiento" => "$fechaNac",
+            "direccion" => "$direccion",
+            "correo" => "$correo",
+            "telefono" => "$telefono",
+            "estudios" => "$tipoEstudio",
+            "estudios_centro" => "$estudiosCentro",
+        );
+
+        
+        $alumno->set($data);
+        if($alumno->msg != ""){
+            echo $alumno->msg;
+        }else{
+            echo $alumno->error;
+        }
         
     }
 ?>

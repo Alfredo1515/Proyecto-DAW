@@ -12,21 +12,21 @@
         public $estudios_Centro;
 
         function __construct(){
-            $this ->db_name = 'bd_ex';
+            $this ->db_name = 'bolsa_trabajo';
         }
 
-        public function get($id=''){
-            if($id != ''){
+        public function get($dni=''){
+            if($dni != ''){
                 $this->query = "
-                SELECT dni, nombre, apellidos, fecha_Nac, direccion, correo, telefono, estudios, estudios_centro
+                SELECT dni, nombre, apellidos, fecha_Nacimiento, direccion, correo, telefono, estudios, estudios_centro
                 FROM  bolsa_alumnos
-                WHERE id = '$dni'
+                WHERE dni = '$dni'
                 ";
                 $this->get_results_from_query();
 
             }else{
                 $this->query = "
-                SELECT dni, nombre, apellidos, fecha_Nac, direccion, correo, telefono, estudios, estudios_centro
+                SELECT dni, nombre, apellidos, fecha_Nacimiento, direccion, correo, telefono, estudios, estudios_centro
                 FROM bolsa_alumnos";
                 $this->get_results_from_query();
             }
@@ -43,9 +43,29 @@
                 $$campo = $valor;
             }
 
-           $alumno = new Alumno();
-           $alumno->get($dni);
-           $datos = $alumno->get_rows();
+            $alumno = new Alumno();
+            $alumno->get($dni);
+            $datos = $alumno->get_rows();
+
+            var_dump($datos);
+
+            if(isset($datos['0'])){
+                if($datos['0']['dni'] == $dni){
+                    $this->error = "DNI Repetido";
+                }
+            }else{
+                $this->query = "
+                INSERT INTO bolsa_alumnos
+                (dni, nombre, apellidos, fecha_Nacimiento, direccion, correo, telefono, estudios, estudios_centro)
+                VALUES
+                ('$dni', '$nombre', '$apellidos', '$fecha_Nacimiento', '$direccion', '$correo', '$telefono', '$estudios', '$estudios_centro')
+                ";
+                $this->execute_single_query();
+                if($this->error==""){
+                    $this->msg = $nombre.' '.$apellidos.' agregado exitosamente';
+                }
+            }
+
         }
 
         public function edit($data = array()){
