@@ -7,14 +7,14 @@
         $direccion = $_POST['direccion'];
         $correo = $_POST['correo'];
         $telefono = $_POST['telefono'];
-        $tipoEstudio = $_POST['tipoEstudio'];
-
-        foreach($_POST as $campo=>$valor){
-            echo "<h1>$campo</h1>";
-            echo "<h3>$valor</h3>";
-        }
-
+        $estudio_ESO = $_POST['estudio_ESO'];
+        $estudio_batchiller = $_POST['estudio_batchiller'];
+        $estudio_ciclo = $_POST['estudio_ciclo'];
+        $estudio_universidad = $_POST['estudio_universidad'];
+        $empresa_FCT = $_POST['empfct'];
+        $usuario_pass = $_POST['contraseña'];
         $estudiosCentro = "";
+        $usuario = "user";
         
         if(isset($_POST['fpb'])){
             if($_POST['fpb'] == "on"){
@@ -49,14 +49,20 @@
             "direccion" => "$direccion",
             "correo" => "$correo",
             "telefono" => "$telefono",
-            "estudios" => "$tipoEstudio",
+            "estudio_ESO" => "$estudio_ESO",
+            "estudio_batchiller" => "$estudio_batchiller",
+            "estudio_ciclo" => "$estudio_ciclo",
+            "estudio_universidad" => "$estudio_universidad",
             "estudios_centro" => "$estudiosCentro",
+            "empresa_FCT" => "$empresa_FCT",
+            "tipo_usuario" => "$usuario",
+            "usuario_pass" => "$usuario_pass"
         );
 
         
         $alumno->set($data);
         if($alumno->msg != ""){
-            echo $alumno->msg;
+            header('location: index.php?p=registroCompleto');
         }else{
             echo $alumno->error;
         }
@@ -74,17 +80,15 @@
         <span>Direccion: </span><input type="text" name="direccion" size="50" maxlength="50" /><span></span><br>
         <span>Correo: </span><input type="text" name="correo" size="50" maxlength="50" class="obligatorio" /><span class="error"></span><br>
         <span>Telefono personal: </span><input type="text" name="telefono" size="50" maxlength="50" class="obligatorio" /><span class="error"></span><br>
+        <span>Contraseña: </span><input type="password" name="contraseña" size="50" maxlength="50" class="obligatorio" /><span class="error"></span><br>
+        <span>Confirmar contraseña: </span><input type="password" name="repiteContraseña" size="50" maxlength="50" class="obligatorio" /><span class="error"></span>
     </fieldset>
     <fieldset class="field" id="academicos">
         <legend>2. Datos academicos</legend>
-        <span>¿Que tipo de titulos posees?</span>
-        <select name="tipoEstudio" id="tipoEstudio" selected="none">
-            <option>Grado Universitario</option>
-            <option>Bachiller</option>
-            <option>ESO</option>
-            <option>Ciclo formativo</option>
-            <option>otros</option>
-        </select>
+        <span>ESO</span><input type="text" name="estudio_ESO" size="50" maxlength="50" /><br>
+        <span>Batchiller</span><input type="text" name="estudio_batchiller" size="50" maxlength="50" /><br>
+        <span>Otros ciclos</span><input type="text" name="estudio_ciclo" size="50" maxlength="50" /><br>
+        <span>Titulo Universitario</span><input type="text" name="estudio_universidad" size="50" maxlength="50" /><br>
     </fieldset>
     <fieldset>
         <legend>3. Cursos en el centro</legend>
@@ -94,7 +98,8 @@
             <li>SMR<input type = "checkbox" name = "smr" /><br></li>
             <li>DAW<input type = "checkbox" name = "daw" /><br></li>
         </ul>
-        <span id="errorCheckbox" class="error"></span>
+        <span id="errorCheckbox" class="error"></span><br>
+        <span>Empresa en la que realizo las FCT(en caso de ser varias, la más reciente): </span><input type="text" name="empfct" size="50" maxlength="50" class="obligatorio" /><span class="error"></span><br>
 
         <input type="submit" name="enviar" value="Enviar" id="enviarRegistro" /><input type="button" name="borrar" value="borrar" />
     </fieldset>

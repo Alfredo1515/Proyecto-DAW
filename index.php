@@ -5,10 +5,14 @@
 <div class="contenido">
     
     <?php
-        if($p == "indice"){
-            include_once("indice.php");
+        if($p == "login"){
+            include_once("login.php");
         }else if($p == "registro"){
             include_once("registro.php");
+        }else if($p == "registroCompleto"){
+            include_once("registroCompleto.php");
+        }else{
+            include_once("login.php");
         }
     ?>
 </div>
