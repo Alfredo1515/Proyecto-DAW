@@ -69,11 +69,38 @@
         }
 
         public function edit($data = array()){
-            
+            foreach ($data as $campo=>$valor){
+                $$campo = $valor;
+            }
+
+            $this->query = "
+                UPDATE bolsa_alumnos
+                SET dni = '$dni',
+                nombre = '$nombre',
+                apellidos = '$apellidos',
+                fecha_Nacimiento = '$fecha_Nacimiento',
+                direccion = '$direccion',
+                correo = '$correo',
+                telefono = '$telefono',
+                estudios = '$estudios',
+                estudios_centro = '$estudios_centro'
+                ";
+
+            $this->execute_single_query();
+            if($this->error==""){
+                $this->msg = $nombre.' '.$apellido.' ha sido modificado exitosamente';
+            }
         }
 
         public function delete($id = ''){
-
+            $this->query = "
+            DELETE FROM alumnos
+            WHERE id = '$id'
+            ";
+            $this->execute_single_query();
+            if($this->error==""){
+                $this->msg = 'Alumno '.$id.' eliminado exitosamente';
+            }
         }
 
         function __destruct(){

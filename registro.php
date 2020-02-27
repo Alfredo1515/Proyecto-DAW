@@ -8,6 +8,12 @@
         $correo = $_POST['correo'];
         $telefono = $_POST['telefono'];
         $tipoEstudio = $_POST['tipoEstudio'];
+
+        foreach($_POST as $campo=>$valor){
+            echo "<h1>$campo</h1>";
+            echo "<h3>$valor</h3>";
+        }
+
         $estudiosCentro = "";
         
         if(isset($_POST['fpb'])){
