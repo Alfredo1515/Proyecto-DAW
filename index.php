@@ -11,6 +11,8 @@
             include_once("registro.php");
         }else if($p == "registroCompleto"){
             include_once("registroCompleto.php");
+        }else if($p == "inicio"){
+            include_once("inicio.php");
         }else{
             include_once("login.php");
         }

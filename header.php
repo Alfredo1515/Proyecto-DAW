@@ -1,4 +1,14 @@
 <?php
+session_start();
+
+    if(!isset($_SESSION['usuario'])){
+        ?>
+        <div class="box">
+            <h3>No puedes acceder sin tener una sesión iniciada</h3>
+            <div class="vinculo"><a href="index.php?p=login">Iniciar sesión</a></div>
+        </div>
+        <?php
+    }
     include_once("clases/db_abstract_model.php");
     include_once("clases/alumno_model.php")
 ?>
