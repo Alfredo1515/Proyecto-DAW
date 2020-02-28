@@ -1,4 +1,6 @@
-<div class="box">
-    <h3>Te has dado de alta de forma satisfactoria</h3>
-    <div class="vinculo"><a href="index.php?p=login">Continuar</a></div>
+<div class="centrada">
+    <div class="mensaje">
+        <h3>Te has dado de alta de forma satisfactoria</h3>
+        <a href="index.php?p=login"><button>Continuar</button></a>
+    </div>
 </div>

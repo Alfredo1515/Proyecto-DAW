@@ -12,7 +12,14 @@
         }else if($p == "registroCompleto"){
             include_once("registroCompleto.php");
         }else if($p == "inicio"){
-            include_once("inicio.php");
+            if(isset($_SESSION['usuario'])){
+                include_once("inicio.php");
+            }else{
+                include_once("sesionInactiva.php");
+            }
+        }else if($p == "logout"){
+            session_destroy();
+            header("location: index.php");
         }else{
             include_once("login.php");
         }
