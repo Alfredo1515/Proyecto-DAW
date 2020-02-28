@@ -5,7 +5,6 @@ body{
 
 .contenido{
     background-color: rgb(169, 253, 253);
-    
     height: 50%;
 }
 
@@ -42,8 +41,9 @@ body{
     border-radius: 10px;
 }
 
-.superior{
-    background-image: url("img/logoIES.jpg");
+#superior{
+    background-image: url("../img/banner2.jpg");
+    height: 200px;
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
 }
