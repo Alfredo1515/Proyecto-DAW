@@ -10,7 +10,7 @@
         $alumno->get($usuario);
         $data = $alumno->get_rows();
 
-        if(count($data) > 1){
+        if(count($data) > 1 || count($data) < 1){
             echo "Usuario no válido";
         }else{
             if($data[0]['usuario_pass'] == $pass){
