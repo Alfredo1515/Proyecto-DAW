@@ -75,7 +75,6 @@ a{
 
 .contenido{
     display: flex;
-    border: 1px solid;
     height: 100%;
 }
 
@@ -84,7 +83,6 @@ a{
     display: flex;
     flex-flow: column;
     flex-grow: 1;
-    border: 1px solid;
     height: 100%;
 }
 

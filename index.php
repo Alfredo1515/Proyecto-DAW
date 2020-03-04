@@ -9,13 +9,11 @@
         if(isset($_SESSION['usuario'])){
             ?>
             <nav class='menuLateral menu'>
-                <ul>
-                    <li><a href='#'>lorem1</a></li>
-                    <li><a href='#'>lorem2</a></li>
-                    <li><a href='#'>lorem3</a></li>
-                    <li><a href='#'>lorem4</a></li>
-                    <li><a href='#'>lorem5</a></li>
-                </ul>
+                <a href='#'>lorem1</a>
+                <a href='#'>lorem2</a>
+                <a href='#'>lorem3</a>
+                <a href='#'>lorem4</a>
+                <a href='#'>lorem5</a>
             </nav>
         <?php
         }
