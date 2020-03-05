@@ -14,7 +14,7 @@ session_start();
     <head>
         <title>Bolsa de trabajo IES Macia Abela</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="css/style4.css">
+        <link rel="stylesheet" href="css/style5.css">
         <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
@@ -24,7 +24,7 @@ session_start();
  
     <body>
 
-    <div class="container">Hola mundo</div>
+    <div class="container cuerpo">
 
     <header>
 
