@@ -26,9 +26,18 @@
 
 <div class = "sesion">
     <form action = "index.php?p=login" method = "POST" enctype = "multipart/form-data">
-        <div class="row d-flex bg-primary justify-content-center login">
-            <div class="col-12">
-                <div class="creedenciales col-12" id="usuario">
+        <div class="row align-items-center justify-content-center login ">
+            <div class="justify-content-center">
+                <p>USUARIO</p>
+                <input type="text" name = "usuario" size="20" maxlength="10" />
+                <p>CONTRASEÑA</p>
+                <input type="password" name = "pass" size="20" maxlength="10" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- <div class="creedenciales col-12" id="usuario">
                     <p>USUARIO</p>
                     <input type="text" name = "usuario" size="20" maxlength="10" />
                 </div>
@@ -40,8 +49,4 @@
                 <input type="submit" name="enviar" value="Enviar" />
 
                 <span>¿No estas registrado?<span>
-                <span><a href="index.php?p=registro">Registrate</a></span>
-            </div>
-        </div>
-    </form>
-</div>
+                <span><a href="index.php?p=registro">Registrate</a></span> -->

@@ -96,11 +96,5 @@ a{
  */
 
 .login{
-    height: 80vh;
- }
-
- .justify-content-center{
-    display: flex;
-    justify-content: center;
-    border: none;
- }
+    min-height: 70vh;
+}
